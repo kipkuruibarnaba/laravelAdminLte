@@ -15,6 +15,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @livewireStyles
 </head>
 <body>
     <div class="wrapper">
@@ -257,5 +258,6 @@
       <!-- jQuery -->
       
     <script src="{{asset('js/app.js')}}"></script>
+    @livewireScripts
 </body>
 </html>

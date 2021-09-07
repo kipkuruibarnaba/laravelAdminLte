@@ -1,4 +1,46 @@
+
 @extends('layouts.app')
+@section('content')
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-header"></div>
+                <div class="card-body">
+                    <div class="card card-primary">
+                      @include('includes.flash-message')
+                        <div class="card-header">
+                          <h3 class="card-title">Create Todo</h3>
+                        </div>
+                        @livewire('todos')                  
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@endsection
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{-- @extends('layouts.app')
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
@@ -46,4 +88,4 @@
         </div>
     </div>
 </div>
-@endsection
+@endsection --}}

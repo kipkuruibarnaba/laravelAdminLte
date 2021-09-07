@@ -9,9 +9,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class Todo extends Model
 {
      use HasFactory,SoftDeletes;
-
-    protected $fillable = [
-        'todoname', 'employee_id','completed'
-    ];
+     
+    protected $fillable = [ 'todoname', 'employee_id','completed'];
 
 }

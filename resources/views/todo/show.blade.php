@@ -30,7 +30,7 @@
                                                 </span>
                                             </th>
                                             <td>{{ $todo->todoname }}</td>
-                                            <td>{{ $todo->employee->firstname .'-'.$todo->employee->lastname }}</td>
+                                            <td>{{ @$todo->employee->firstname .'-'.@$todo->employee->lastname }}</td>
                                             <td>
                                                 @if ($todo->completed == 0)
                                                 <span class="badge badge-danger">Pending</span>
