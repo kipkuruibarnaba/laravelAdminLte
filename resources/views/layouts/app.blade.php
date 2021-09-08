@@ -16,7 +16,9 @@
   <link rel="stylesheet" href="{{ asset('plugins/datatables-bs4/css/dataTables.bootstrap4.min.css')}}">
   <link rel="stylesheet" href="{{asset('plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
   <link rel="stylesheet" href="{{ asset('plugins/datatables-buttons/css/buttons.bootstrap4.min.css')}}">
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     @livewireStyles
@@ -32,7 +34,7 @@
               <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
-              <a href="{{url('/home')}}" class="nav-link">Home</a>
+              <a href="{{url('/')}}" class="nav-link">Home</a>
             </li>
             <li class="nav-item d-none d-sm-inline-block">
               <a href="{{url('show/companies')}}" class="nav-link">View Companies</a>
@@ -81,15 +83,36 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
-                <i class="fas fa-th-large"></i>
-              </a>
+
+              {{-- logoutform --}}
+                <li class="nav-item dropdown">
+                  <a id="navbarDropdown" class="nav-link dropdown-toggle text-primary" href="#" role="button"
+                      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                     {{-- <strong> {{ Auth::user()->name }}</strong> --}}
+                  </a>
+
+                  <div class="dropdown-menu dropdown-menu-right bg-info" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                            document.getElementById('logout-form').submit();">
+                          {{ __('Logout') }}
+                      </a>
+
+                      <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                          class="d-none">
+                          @csrf
+                      </form>
+                  </div>
+              </li> 
+              
+              
             </li>
           </ul>
-         Logout
+
         </nav>
+
+        
         <!-- /.navbar -->
-      
+      <!-- Example single danger button -->
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
           <!-- Brand Logo -->
