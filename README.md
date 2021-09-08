@@ -16,3 +16,10 @@ Installation instructions
    11.Login using the credentials :
    email address: admin@admin.com
    password: password
+
+After successfully installation and Login
+
+1. Start by Creating Companies .
+2. Followed by Add Employees.
+3. The you can now add the todos for different employees.
+4. To view, Edit, Update and Delete data..Use the Meno above for view companaies,view employees and view todos

@@ -54,7 +54,7 @@ class EmployeeController extends Controller
             ]);
             $data=Employee::create($Employeedata);
         
-            return redirect()->back()->with('message', 'Employee Added Successfully!');
+             return redirect()->route('employees')->with('message', 'Employee Added Successfully!');
            }
        
         }catch (Exception $e){

@@ -2,11 +2,11 @@
 @section('content')
     <div class="container">
         <div class="row justify-content-center">
-            @include('includes.flash-message')
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header"></div>
                     <div class="card-body">
+                     @include('includes.flash-message')                  
                         <div class="card card-primary">
                             <div class="card-header">
                                 <h3 class="card-title">Edit Company</h3>

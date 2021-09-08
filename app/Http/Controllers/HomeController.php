@@ -56,7 +56,7 @@ class HomeController extends Controller
             ]);
             $data=Company::create($companydata);
         
-            return redirect()->back()->with('message', 'Company Created Successfully!');
+             return redirect()->route('companies')->with('message' , 'Company Created Succesfullly!');
        
         }catch (Exception $e){
             return $e->getMessage();

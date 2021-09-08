@@ -7,6 +7,7 @@
             <div class="card">
                 <div class="card-header"></div>
                 <div class="card-body">
+                   @include('includes.flash-message')
                     <div class="card card-primary">
                       @include('includes.flash-message')
                         <div class="card-header">

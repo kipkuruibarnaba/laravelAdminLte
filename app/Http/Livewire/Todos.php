@@ -24,7 +24,6 @@ class Todos extends Component
 
     public function store()
     {
-        dd($this->completed);
         $Todo = new Todo;
         $Todo->todoname = $this->todoname;
         $Todo->employee_id = $this->employeename;

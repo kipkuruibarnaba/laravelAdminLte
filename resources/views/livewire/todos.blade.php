@@ -1,6 +1,5 @@
 <div>
-
-    <div>
+    @if(count($employees)>0)
         {{-- Knowing others is intelligence; knowing yourself is true wisdom. --}}
         <form  wire:submit.prevent ="store">
           <div class="card-body">
@@ -32,5 +31,8 @@
             <button type="submit" class="btn btn-secondary">Create Todo</button>
           </div>
         </form> 
-      </div>
+        @else
+        <br><br>
+        <p class="text-danger h4">Add Employess first!</p>
+        @endif
 </div>
