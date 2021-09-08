@@ -77,9 +77,7 @@ class TodoController extends Controller
     public function edit($id)
     {
        $todo = Todo::find($id);
-    //    dd($todo);
        $employees = Employee::all();
-    //    dd($employees);
        return view('todo.edit', compact('todo','employees'));
     }
 
@@ -118,7 +116,6 @@ class TodoController extends Controller
        $todos=Todo::onlyTrashed()->get();
        foreach ( $todos as $todo) {
          $todo->employee = Employee::where(['id' => $todo->employee_id])->first();
-         dd($todo->employee);
        }
       return view('todo.trashed',compact('todos'));
 

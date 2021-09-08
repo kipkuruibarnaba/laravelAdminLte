@@ -71,9 +71,6 @@
                                                     </div>
                                                     <!-- /.modal-dialog -->
                                                 </div>                                               
-
-
-
                                             </td>
                                         </tr>
                                     @endforeach
