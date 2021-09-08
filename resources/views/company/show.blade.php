@@ -34,7 +34,36 @@
                                                 <a href="{{ url('edit/company/'.$company->id)}}"class="btn btn-block btn-info">Edit</a>
                                             </td>
                                              <td>
-                                                <a href="{{ url('delete/company/'.$company->id)}}" class="btn btn-block btn-danger">Delete</a>
+                                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modal-delete-company">
+                                            Delete
+                                            </button>
+
+
+                                                    {{-- Modal Delete --}}
+
+                                            <div class="modal fade" id="modal-delete-company" style="display: none;" aria-hidden="true">
+                                                <div class="modal-dialog">
+                                                <div class="modal-content bg-danger ">
+                                                    <div class="modal-header">
+                                                    <h4 class="modal-title">Delete </h4>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">×</span>
+                                                    </button>
+                                                    </div>
+                                                    <div class="modal-body ">
+                                                    <p>Are you sure you want to Delete ?</p>
+                                                    </div>
+                                                    <div class="modal-footer justify-content-between">
+                                                    <button type="button" class="btn btn-outline-dark" data-dismiss="modal">No</button>
+                                                    <a href="{{ url('delete/company/'.$company->id)}}" type="button" class="btn btn-outline-dark">Yes</a>
+                                                    </div>
+                                                </div>
+                                                <!-- /.modal-content -->
+                                                </div>
+                                                <!-- /.modal-dialog -->
+                                            </div>                                       
+    
+                                                {{-- <a href="{{ url('delete/company/'.$company->id)}}" class="btn btn-block btn-danger">Delete</a> --}}
                                             </td>                                           
                                         </tr>
                                     @endforeach
@@ -45,4 +74,5 @@
                 </div>
             </div>
         </div>
+                
     @endsection
